@@ -18,9 +18,9 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 
-from ...image_processing_utils import INIT_SERVICE_KWARGS, BaseImageProcessor, BatchFeature, get_size_dict
-from ...image_transforms import resize, to_channel_dimension_format
-from ...image_utils import (
+from transformers.image_processing_utils import INIT_SERVICE_KWARGS, BaseImageProcessor, BatchFeature, get_size_dict
+from transformers.image_transforms import resize, to_channel_dimension_format
+from transformers.image_utils import (
     IMAGENET_DEFAULT_MEAN,
     IMAGENET_DEFAULT_STD,
     ChannelDimension,
@@ -33,7 +33,7 @@ from ...image_utils import (
     valid_images,
     validate_preprocess_arguments,
 )
-from ...utils import (
+from transformers.utils import (
     TensorType,
     filter_out_non_signature_kwargs,
     is_torch_available,
@@ -41,7 +41,7 @@ from ...utils import (
     is_vision_available,
     logging,
 )
-from ...utils.deprecation import deprecate_kwarg
+from transformers.utils.deprecation import deprecate_kwarg
 
 
 if is_vision_available():

@@ -16,8 +16,8 @@
 
 import warnings
 
-from ...utils import logging
-from .image_processing_segformer import SegformerImageProcessor
+from transformers.utils import logging
+from transformers.models.segformer.image_processing_segformer import SegformerImageProcessor
 
 
 logger = logging.get_logger(__name__)

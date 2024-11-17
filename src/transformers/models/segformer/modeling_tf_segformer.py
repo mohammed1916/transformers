@@ -21,24 +21,24 @@ from typing import Optional, Tuple, Union
 
 import tensorflow as tf
 
-from ...activations_tf import get_tf_activation
-from ...file_utils import (
+from transformers.activations_tf import get_tf_activation
+from transformers.file_utils import (
     add_code_sample_docstrings,
     add_start_docstrings,
     add_start_docstrings_to_model_forward,
     replace_return_docstrings,
 )
-from ...modeling_tf_outputs import TFBaseModelOutput, TFSemanticSegmenterOutput, TFSequenceClassifierOutput
-from ...modeling_tf_utils import (
+from transformers.modeling_tf_outputs import TFBaseModelOutput, TFSemanticSegmenterOutput, TFSequenceClassifierOutput
+from transformers.modeling_tf_utils import (
     TFPreTrainedModel,
     TFSequenceClassificationLoss,
     keras,
     keras_serializable,
     unpack_inputs,
 )
-from ...tf_utils import shape_list, stable_softmax
-from ...utils import logging
-from .configuration_segformer import SegformerConfig
+from transformers.tf_utils import shape_list, stable_softmax
+from transformers.utils import logging
+from transformers.models.segformer.configuration_segformer import SegformerConfig
 
 
 logger = logging.get_logger(__name__)
